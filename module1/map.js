@@ -22,10 +22,3 @@ console.log(newMap.size);
 
 //One cannot directly use JSON.stringify() on a map.
 //https://stackoverflow.com/questions/29085197/how-do-you-json-stringify-an-es6-map 
-
-//LESSON TASK
-const users = new Map();
-users.set(12, {firstName: "Ola", lastName: "Nordmann"});
-console.log(users.size);
-
-users.set(50, {firstName: "Kari",})
