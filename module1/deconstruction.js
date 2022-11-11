@@ -28,3 +28,19 @@ function greetUser({
 greetUser(person);
 
 //ARRAYS
+const myArray = [230, 59, 390, 348, 1239, 854934, 4839, 82393, 89248];
+//can have any 👇name
+const [firstValue, 
+    //secondValue, 👈skipped
+    , thirdValue
+    //select all 👇remaining numbers (exept skipped number)
+    , ...remainingNumbers
+] = myArray;
+
+console.log(firstValue, thirdValue, "remainding numbers: ", remainingNumbers);
+
+//practical example 👇
+const coordinates = [49, 20];
+const [x, y] = coordinates;
+
+console.log("coordinates: ", "x: ", x, "y: ", y)
