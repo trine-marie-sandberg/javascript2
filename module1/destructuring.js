@@ -10,7 +10,7 @@ const person = {
 };
 
 //Aliasing (changing👇property name)
-const { firstName: userName, lastName, isAdmin } = person;
+const { firstName: userName, lastName, isAdmin, street, streetNumber } = person;
 
 console.log(userName, lastName, isAdmin);
 
