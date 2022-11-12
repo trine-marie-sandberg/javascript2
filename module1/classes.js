@@ -4,6 +4,7 @@
 //Classes form the basis of object oriented programming (OOP), but are not used often in JavaScript.
 
 //EXAMPLE
+
 class MyClass {
     // This is a property in our class
     basicProperty = 'My basic property';
@@ -42,4 +43,73 @@ class MyClass {
   ola.greet();
   userId2.greet();
 
-  //Static methods and properties
+  //STATIC METHODS AND PROPERTIES
+
+  //Static methods and properties allow us to create methods,
+  //and properties that are attached to the main class itself instead of the instance of a class.
+  class User {
+    constructor(name) {
+      this.name = name;
+    }
+  
+    // This method is available to all instances of a class
+    greetUser() {
+      console.log(`Hello ${this.name}!`);
+    }
+  
+    static company = 'Acme';
+  
+    // This method is available only on the User class itself
+    static displayTime() {
+      console.log('12:00');
+    }
+  }
+  
+  const newUser = new User('Ola Nordmann');
+  
+  // This is called on the new instance of the class
+  newUser.greetUser();
+  // Logs:
+  // Hello Ola Nordmann
+  
+  // The static property 'company' is only available on the class itself
+  console.log(User.company);
+  // Logs:
+  // Acme
+  
+  // The static method 'displayTime()' is only available on the class itself
+  User.displayTime();
+  // Logs:
+  // 12:00
+
+  //EXTENDING A CLASS
+
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+    speak() {
+      console.log(`${this.name} makes a sound`);
+    }
+  }
+  
+  class Cat extends Animal {
+    //
+    constructor(name) {
+      super(name);
+    }
+  
+    speak() {
+      console.log(`${this.name} goes meow`);
+    }
+  }
+  
+  const sheep = new Animal('Lambert');
+  sheep.speak();
+  // Logs:
+  // Lambert makes a sound
+  
+  const cat = new Cat('Pookie');
+  cat.speak();
+  // Logs:
+  // Pookie goes meow
