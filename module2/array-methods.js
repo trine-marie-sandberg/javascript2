@@ -1,4 +1,4 @@
-//MAP
+//MAP METHOD
 
 const values = [100, 200, 300, 400, 500];
 
@@ -19,7 +19,7 @@ const ourDogs = [
 ];
 
 const familyDogs = ourDogs.map((dogsAndOwner) => {
-  return "Owner: " + dogsAndOwner.owner + " " + "Dogs: " + dogsAndOwner.dogs;
+  return `Owner: ${dogsAndOwner.owner} Dogs: ${dogsAndOwner.dogs}`;
 });
 
 console.log(familyDogs)
