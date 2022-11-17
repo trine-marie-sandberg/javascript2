@@ -15,7 +15,7 @@ const sum = values.reduce((total, value) => {
   // You can see we are setting an initial value of 0 after the callback function
 }, 0);
 
-//console.log(sum);
+console.log(sum);
 // Returns:
 // 40
 
@@ -33,4 +33,3 @@ const experiment = values.reduce((previousValue, currentElement, index, array) =
     
     //console.log(`Previous value: ${previousValue} Current element: ${currentElement} Index: ${index} Array: ${array}`)
 });
-console.log(sum);
