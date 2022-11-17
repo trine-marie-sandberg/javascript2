@@ -28,3 +28,58 @@ const filteredNumbers = numbers.filter((number) => {
 console.log(filteredNumbers);
 // Returns:
 // [3, 4, 5]
+
+//Our .filter method relies on the value being a boolean (either true or false), 
+//so we could simplify the above example to return the conditional check:
+const numbers2 = [1, 2, 3, 4, 5];
+const filteredNumbers2 = numbers.filter((number) => number >= 3);
+console.log(filteredNumbers);
+// Returns:
+// [3, 4, 5]
+
+const people = [
+  {
+    firstName: "Lars",
+    lastName: "Hansen"
+  },
+  {
+    firstName: "Tine",
+    lastName: "Bergensen"
+  },
+  {
+    firstName: "Åse",
+    lastName: "Borger"
+  },
+  {
+    firstName: "Jan"
+  }
+];
+
+//Search for a pearsons last name                                       👇 search for this person(case sensitive)
+const filteredPeople = people.filter((person) => person.firstName === "Åse");
+filteredPeople.forEach((person) => console.log("Lastname: " + person.lastName));
+console.log(`Lastname: ${filteredPeople[0].lastName}`);
+
+//PRACTICAL EXAMPLE
+const games = [
+  { title: 'Mayhem Fighter', isMultiplayer: true, rating: 8 },
+  { title: 'Build-a-farm', isMultiplayer: true, rating: 9 },
+  { title: 'Ghost Story', isMultiplayer: false, rating: 8 },
+  { title: 'Fast Car Racer', isMultiplayer: true, rating: 7 },
+  { title: 'Elf and Dwarf RPG', isMultiplayer: false, rating: 8 },
+];
+
+const filteredGames = games.filter((game) => {
+  if (game.isMultiplayer === true && game.rating >= 8) {
+    return true;
+  }
+});
+
+console.log(filteredGames);
+
+//The above example can be refactored to be more concise:
+const filteredGames2 = games.filter(
+  (game) => game.isMultiplayer && game.rating >= 8,
+);
+
+console.log(filteredGames2);
