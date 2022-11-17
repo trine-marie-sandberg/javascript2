@@ -15,13 +15,22 @@ const sum = values.reduce((total, value) => {
   // You can see we are setting an initial value of 0 after the callback function
 }, 0);
 
-console.log(sum);
+//console.log(sum);
 // Returns:
 // 40
 
 const experiment = values.reduce((previousValue, currentElement, index, array) => {
     let objectArray = [];
-    objectArray.push({prevValue: previousValue, currElement: currentElement, i: index, arr: array});
+    objectArray.push(
+        {
+            previousValue: previousValue, 
+            currentElement: currentElement, 
+            index: index, 
+            array: array
+        }
+        );
     console.log(objectArray);
+    
     //console.log(`Previous value: ${previousValue} Current element: ${currentElement} Index: ${index} Array: ${array}`)
 });
+console.log(sum);
