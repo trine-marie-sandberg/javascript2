@@ -1,0 +1,1 @@
+//Unlike most array methods, reduce returns a single variable
