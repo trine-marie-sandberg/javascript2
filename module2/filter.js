@@ -15,3 +15,16 @@ const newArray = values.filter((element, index, array) => {
 //Implisit false return
 //The filter method has an implicit false return meaning that it will always return false if you haven’t returned a value
 //In most cases, you usually only have to check for true conditions
+
+//CONDITIONAL CHECK
+const numbers = [1, 2, 3, 4, 5];
+const filteredNumbers = numbers.filter((number) => {
+  if (number >= 3) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(filteredNumbers);
+// Returns:
+// [3, 4, 5]
