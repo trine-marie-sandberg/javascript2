@@ -31,5 +31,8 @@ const experiment = values.reduce((previousValue, currentElement, index, array) =
         );
     console.log(objectArray);
     
-    //console.log(`Previous value: ${previousValue} Current element: ${currentElement} Index: ${index} Array: ${array}`)
+    //console.log(`Previous value: ${previousValue} Current element: ${currentElement} Index: ${index} Array: ${array}`);
 });
+
+//A note regarding the initial value:
+//More often than not, you’ll need to set the initial value for your reduce array methods
