@@ -18,7 +18,7 @@ const sum = values.reduce((total, value) => {
 let objectArray = [];
 const experiment = values.reduce((previousValue, currentElement, index, array) => {
 
-    previousValue = 3
+    previousValue = 0;
     objectArray.push(
         {
             previousValue: previousValue, 
