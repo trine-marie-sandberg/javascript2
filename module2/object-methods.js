@@ -72,6 +72,15 @@ const recipe = {
   console.log(keysAndValues);
 
   //OBJECT.VALUES()
+  //create an array of only the values from the object
   console.log(Object.values(person));
 
-  //
+  //OBJECT.ENTRIES()
+  //returns an array containing both the key and value
+  Object.entries(person).forEach((keyValuePair) => {
+    console.log(keyValuePair);
+  });
+
+  Object.entries(person).forEach(([key, value]) => {
+    console.log('key:', key, 'value:', value);
+  });
