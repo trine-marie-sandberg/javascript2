@@ -15,24 +15,22 @@ const sum = values.reduce((total, value) => {
   // You can see we are setting an initial value of 0 after the callback function
 }, 0);
 
-console.log(sum);
-// Returns:
-// 40
-
+let objectArray = [];
 const experiment = values.reduce((previousValue, currentElement, index, array) => {
-    let objectArray = [];
+
+    previousValue = 3
     objectArray.push(
         {
             previousValue: previousValue, 
             currentElement: currentElement, 
             index: index, 
             array: array
-        }
-        );
-    console.log(objectArray);
-    
-    //console.log(`Previous value: ${previousValue} Current element: ${currentElement} Index: ${index} Array: ${array}`);
+        });
+
+        return objectArray;
 });
+
+console.log(objectArray);
 
 //A note regarding the initial value:
 //More often than not, you’ll need to set the initial value for your reduce array methods
