@@ -33,3 +33,18 @@ const experiment = values.reduce((previousValue, currentElement, index, array) =
 });
 
 console.log(objectArray);
+
+//PRACTICAL EXAMPLE
+const products = [
+    { title: 'Cheese', price: 15.0 },
+    { title: 'Milk', price: 8.99 },
+    { title: 'Bread', price: 22.0 },
+    { title: 'Egg', price: 5 },
+  ];
+  
+  const totalCost = products.reduce(
+    (total, currentProduct) => (total += currentProduct.price),
+    0,
+  );
+  
+  console.log(totalCost);
