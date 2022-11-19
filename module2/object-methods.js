@@ -35,8 +35,43 @@ const recipe = {
   };
 
   //FOR...IN LOOP
-  for (const myKey in recipe) {
+  //The for...in loop used with an object will iterate over the keys of the object.
+  
+  for (myKey in recipe) {
     // We are looping through the keys of the object. To get the value you
     //    need to use the key (myKey) as a way to reference the key/value pair.
     console.log(recipe[myKey]);
   };
+
+  //EXAMPLE
+  const person2 = {
+    firstName: 'Ola',
+    lastName: 'Nordmann',
+    module: 'JavaScript',
+  };
+  
+  for (const key in person2) {
+    // Use the key to access the value from the key/value pair
+    console.log('key:', key, 'value:', person[key]);
+  };
+
+  //OBJECT.KEYS()
+  const myObject = {
+    key1: "1",
+    key2: "2"
+  };
+  
+  const keysArray = Object.keys(myObject);
+  console.log(keysArray);
+
+  //NOTE: We can now use our array methods, such as map(), filter() and reduce() on the keys
+  const keysAndValues = Object.keys(person).map((key) => {
+    return `key: ${key}, value: ${person[key]}`;
+  });
+  
+  console.log(keysAndValues);
+
+  //OBJECT.VALUES()
+  console.log(Object.values(person));
+
+  //
