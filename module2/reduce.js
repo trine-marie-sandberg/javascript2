@@ -18,7 +18,9 @@ const sum = values.reduce((total, value) => {
 let objectArray = [];
 const experiment = values.reduce((previousValue, currentElement, index, array) => {
 
+//More often than not, you’ll need to set the initial value for your reduce array methods
     previousValue = 0;
+
     objectArray.push(
         {
             previousValue: previousValue, 
@@ -31,6 +33,3 @@ const experiment = values.reduce((previousValue, currentElement, index, array) =
 });
 
 console.log(objectArray);
-
-//A note regarding the initial value:
-//More often than not, you’ll need to set the initial value for your reduce array methods
