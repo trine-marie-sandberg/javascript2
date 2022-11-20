@@ -2,7 +2,12 @@
 //Can only have one default export, pr file
 //named imports needs {}
 //Importing both default and named imports
+//NOTE: Modules are deferred by default
 import myDefaultExport, { logModule as logThisIsAModule }  from "./module.mjs";
 import myDefaultExport2 from "./module2.mjs";
 myDefaultExport();
 myDefaultExport2();
+
+//Modules are deferred by default
+const selectBody = document.querySelector("body");
+selectBody.innerHTML = "<h1>Testing if the body element is selected</h1>"
