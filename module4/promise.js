@@ -16,3 +16,33 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then((response) => response.json())
   // Data is now available as
   .then((json) => console.log(json));
+
+  //.catch()
+  //doSomething()
+  //.then()
+  //.catch(error =>
+    // Handle the error here
+  //);
+
+  //.fetch()
+  fetch('abc')
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  // An error is going to be thrown causing the code below
+  // to run
+  .catch((error) => {
+    console.log('An error has been thrown');
+    console.log(error);
+  });
+
+  //.finally() will always run regardless of whether there was an error or not
+  let isLoading = true;
+  console.log(isLoading)
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  .catch((error) => console.log(error))
+  .finally(
+    isLoading = false
+  );
+  console.log(isLoading);
