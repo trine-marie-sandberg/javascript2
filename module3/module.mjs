@@ -8,3 +8,7 @@ function defaultExport() {
 };
 
 export default defaultExport;
+
+export function addNumbers(a, b) {
+    return a + b;
+  };

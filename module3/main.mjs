@@ -10,4 +10,17 @@ myDefaultExport2();
 
 //Modules are deferred by default
 const selectBody = document.querySelector("body");
-selectBody.innerHTML = "<h1>Testing if the body element is selected</h1>"
+selectBody.innerHTML = "<h1>Testing if the body element is selected</h1>";
+
+//DYNAMIC IMPORTS
+async function doSum() {
+
+    const mathModule = './module.mjs';
+    //importing module when inside this function
+    const { addNumbers } = await import(mathModule);
+  
+    const result = addNumbers(10, 10);
+    console.log(result);
+  };
+  
+  doSum();
