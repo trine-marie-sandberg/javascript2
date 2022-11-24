@@ -1,0 +1,1 @@
+//The GET request mode is the default mode when doing a fetch, but for POST we need to include a method
