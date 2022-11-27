@@ -48,6 +48,7 @@ const userToLogin = {
 async function loginUser(url, userData) {
     //
     try {
+
         console.log(url, userData)
         const postData = {
             method: 'POST',
@@ -56,13 +57,48 @@ async function loginUser(url, userData) {
             },
             body: JSON.stringify(userData),
         };
+
         const response = await fetch(url, postData);
         console.log(response)
         const json = await response.json();
         console.log(json)
+
+        //ACCESS TOKEN
+        const accessToken = json.accessToken;
+        //ADD TO LOCALSTORAGE
+        localStorage.setItem("accessToken", accessToken);
+
     } catch (error) {
         console.log(error);
     };
 };
 
-loginUser(loginUrl, userToLogin);
+const allPostsUrl = "/api/v1/social/posts";
+const postsUrl = API_BASE_URL + allPostsUrl;
+
+//loginUser(loginUrl, userToLogin);
+
+//REQUEST WITH TOKEN
+async function getWithToken(url) {
+    //
+    try {
+        const token = localStorage.getItem("accessToken");
+        console.log(token)
+        const fetchOptions = {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            },
+        };
+
+        console.log(url);
+        const response = await fetch(url, fetchOptions);
+        const json = await response.json();
+        console.log(json);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+getWithToken(postsUrl);
